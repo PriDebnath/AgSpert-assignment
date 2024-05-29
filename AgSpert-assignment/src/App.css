@@ -1,6 +1,12 @@
+body {
+  height: 100vh;
+}
+
 .nav {
   width: 100vw;
   display: block;
+  position: fixed;
+  top: 0;
 }
 
 .nav ul {
@@ -11,4 +17,17 @@
 
 .nav ul li {
   list-style: none;
+}
+
+/* form start */
+.form-container {
+  width: 100vw;
+}
+
+.form-box {
+  max-width: 33rem;
+  padding: 1rem 2rem;
+  margin: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0px 2px 8px #3197;
 }
