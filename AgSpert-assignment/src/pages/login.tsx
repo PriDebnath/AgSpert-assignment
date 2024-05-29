@@ -31,12 +31,16 @@ const validationSchema = Yup.object({
 export const Login = () => {
   const dispatch: any = useDispatch();
   const navigate = useNavigate();
-  const handleSubmit = (values: any, actions: any) => {
+  const handleSubmit = async (values: any, actions: any) => {
     console.log("handle submit");
-    dispatch(login(values));
-    setTimeout(() => {
+    try {
+      await dispatch(login(values)).unwrap();
+      navigate("/sale-order");
+    } catch (error) {
+      alert("Login failed: " + error);
+    } finally {
       actions.setSubmitting(false);
-    }, 2000);
+    }
   };
   return (
     <div className="form-container">

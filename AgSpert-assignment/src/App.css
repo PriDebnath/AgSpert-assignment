@@ -31,3 +31,21 @@ body {
   border-radius: 0.5rem;
   box-shadow: 0px 2px 8px #3197;
 }
+
+.box {
+  max-width: 50rem;
+  padding: 1rem 2rem;
+  margin: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0px 2px 8px #3197;
+}
+.tab-con {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* common*/
+.d-flex {
+  display: flex;
+}
