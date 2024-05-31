@@ -120,12 +120,12 @@ app.get("/sale-order", async (req, res) => {
     {
       id: 1,
       customer,
-      product1,
+      product: product1,
     },
     {
       id: 2,
       customer,
-      product2,
+      product: product2,
     },
   ];
 
