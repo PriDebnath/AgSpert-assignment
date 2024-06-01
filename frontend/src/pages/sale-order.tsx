@@ -1,4 +1,4 @@
-import { EmailIcon, ArrowForwardIcon, AddIcon } from "@chakra-ui/icons";
+import { AddIcon } from "@chakra-ui/icons";
 import {
   Tabs,
   TabList,
@@ -10,26 +10,17 @@ import {
   Table,
   Thead,
   Tbody,
-  Tfoot,
   Tr,
   Th,
   Td,
-  TableCaption,
   TableContainer,
   Icon,
   Button,
-  ButtonGroup,
-  ChakraProvider,
-  Avatar,
-  AvatarBadge,
   Box,
 } from "@chakra-ui/react";
-import { useState, useEffect, SetStateAction } from "react";
+import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  getProducts,
-  getSaleOrder as saleOrderApi,
-} from "../redux/features/sale-order/saleOrderApi";
+import { getSaleOrder as saleOrderApi } from "../redux/features/sale-order/saleOrderApi";
 import API_REQUEST_STATUS from "../redux/utils/constants/apiRequestStatus";
 import moment from "moment";
 import { SaleOrderForm } from "./sale-order-form";
@@ -37,7 +28,6 @@ import { SaleOrderForm } from "./sale-order-form";
 export const SaleOrder = () => {
   const dispatch: any = useDispatch();
   let [loading, setLoading]: any = useState([]);
-  let [tab, setTab]: any = useState([]);
   let [saleOrders, setSaleOrders]: any = useState([]);
   let [isReadOnly, setIsReadOnly]: any = useState([]);
   const saleOrder = useSelector((globalState: any) => globalState.saleOrder);
@@ -86,10 +76,8 @@ export const SaleOrder = () => {
           <TabList>
             <div className="tab-con">
               <div className="d-flex">
-                <Tab onClick={() => setTab("active")}>Active Sale Orders</Tab>
-                <Tab onClick={() => setTab("completed")}>
-                  Completed Sale Orders
-                </Tab>
+                <Tab>Active Sale Orders</Tab>
+                <Tab>Completed Sale Orders</Tab>
               </div>
               <div>
                 <Stack direction="row" spacing={4}>

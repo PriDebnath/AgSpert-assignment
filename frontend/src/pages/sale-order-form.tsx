@@ -16,7 +16,7 @@ import {
 } from "@chakra-ui/react";
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   addSaleOrder,
@@ -67,7 +67,6 @@ export function SaleOrderForm({
 }: SaleOrderFormProps) {
   const dispatch: any = useDispatch();
   const product = useSelector((globalState: any) => globalState.product);
-  let [loading, setLoading]: any = useState([]);
 
   let [productList, setProductList]: any = useState([]);
   useEffect(() => {
@@ -76,11 +75,9 @@ export function SaleOrderForm({
 
   useEffect(() => {
     if (product.status == API_REQUEST_STATUS.PENDING) {
-      setLoading(true);
     }
     if (product.status == API_REQUEST_STATUS.SUCCEEDED) {
       setProductList(product.data.results);
-      setLoading(false);
     }
     if (product.status == API_REQUEST_STATUS.FAILED) {
       // code

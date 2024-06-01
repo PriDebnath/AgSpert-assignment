@@ -18,29 +18,29 @@ const saleOrderSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(getSaleOrder.pending, (state, action) => {
+    builder.addCase(getSaleOrder.pending, (state) => {
       state.status = PENDING;
     });
     builder.addCase(getSaleOrder.fulfilled, (state, action) => {
       state.status = SUCCEEDED;
       state.data = action.payload;
     });
-    builder.addCase(getSaleOrder.rejected, (state, action) => {
+    builder.addCase(getSaleOrder.rejected, (state) => {
       state.status = FAILED;
     });
     //
-    builder.addCase(addSaleOrder.pending, (state, action) => {
+    builder.addCase(addSaleOrder.pending, (state) => {
       state.status = PENDING;
     });
     builder.addCase(addSaleOrder.fulfilled, (state, action) => {
       state.status = SUCCEEDED;
       state.data = action.payload;
     });
-    builder.addCase(addSaleOrder.rejected, (state, action) => {
+    builder.addCase(addSaleOrder.rejected, (state) => {
       state.status = FAILED;
     });
     //
-    builder.addCase(editSaleOrder.pending, (state, action) => {
+    builder.addCase(editSaleOrder.pending, (state) => {
       console.log("in slice edit");
       state.status = PENDING;
     });
@@ -48,7 +48,7 @@ const saleOrderSlice = createSlice({
       state.status = SUCCEEDED;
       state.data = action.payload;
     });
-    builder.addCase(editSaleOrder.rejected, (state, action) => {
+    builder.addCase(editSaleOrder.rejected, (state) => {
       state.status = FAILED;
     });
     //
@@ -60,14 +60,14 @@ const productSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(getProducts.pending, (state, action) => {
+    builder.addCase(getProducts.pending, (state) => {
       state.status = PENDING;
     });
     builder.addCase(getProducts.fulfilled, (state, action) => {
       state.status = SUCCEEDED;
       state.data = action.payload;
     });
-    builder.addCase(getProducts.rejected, (state, action) => {
+    builder.addCase(getProducts.rejected, (state) => {
       state.status = FAILED;
     });
   },

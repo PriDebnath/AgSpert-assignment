@@ -1,4 +1,3 @@
-import React from "react";
 import {
   FormControl,
   FormLabel,
@@ -9,7 +8,7 @@ import {
 import { Field, Form, Formik, FieldProps, FormikProps } from "formik";
 import * as Yup from "yup";
 import { useNavigate } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { login } from "../redux/features/login/loginApi";
 
 interface FormValues {
