@@ -408,12 +408,13 @@ app.get("/sale-order/:id", (req, res) => {
     return res
       .status(404)
       .json({ status: 404, message: "Sale order not found" });
-
-  res.json({
-    status: 200,
-    message: "success",
-    results: order,
-  });
+  setTimeout(() => {
+    res.json({
+      status: 200,
+      message: "success",
+      results: order,
+    });
+  }, 1000);
 });
 
 // Create a new sale order
@@ -477,6 +478,15 @@ app.delete("/sale-order/:id", (req, res) => {
   });
 });
 
+app.post("/login", async (req, res) => {
+  console.log("+hj");
+  setTimeout(() => {
+    res.json({
+      status: 200,
+      message: "success",
+    });
+  }, 2000);
+});
 app.listen(port, () => {
   console.log("Running on " + port);
 });

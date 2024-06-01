@@ -8,9 +8,9 @@ const Layout = () => {
           <li>
             <Link to="/">Log in</Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/registration">Registration</Link>
-          </li>
+          </li> */}
           <li>
             <Link to="/sale-order">Sale Order</Link>
           </li>
