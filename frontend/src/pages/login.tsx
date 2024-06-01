@@ -46,7 +46,7 @@ export const Login = () => {
     <div className="form-container">
       <div className="form-box ">
         <Formik
-          initialValues={{ name: "p", email: "p@gmail.com", password: "ps" }}
+          initialValues={{ name: "", email: "", password: "" }}
           validationSchema={validationSchema}
           onSubmit={(values, actions) => {
             handleSubmit(values, actions);
