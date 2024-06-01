@@ -3,7 +3,7 @@ import { API_URLS } from "../../utils/constants/apiUrls";
 
 const getProducts = createAsyncThunk(
   "products/getProducts",
-  async function (sort: string, { rejectWithValue }) {
+  async function (_sort: string, { rejectWithValue }) {
     try {
       let response = await fetch(API_URLS.products, {
         method: "get",
@@ -57,7 +57,7 @@ const editSaleOrder = createAsyncThunk(
 );
 const getSaleOrder = createAsyncThunk(
   "saleOrder/getSaleOrder",
-  async function (sort: string, { rejectWithValue }) {
+  async function (_sort: string, { rejectWithValue }) {
     try {
       let response = await fetch(API_URLS.sale_order, {
         method: "get",
