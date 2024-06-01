@@ -1,11 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 import loginSlice from "../features/login/loginSlice";
-import saleOrderSlice from "../features/sale-order/saleOrderSlice";
+import { pr, sr } from "../features/sale-order/saleOrderSlice";
 
 const store = configureStore({
   reducer: {
     login: loginSlice,
-    saleOrder: saleOrderSlice,
+    saleOrder: sr,
+    product: pr,
   },
 });
 

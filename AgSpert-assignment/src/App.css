@@ -58,6 +58,7 @@ body {
 .justify-content-center {
   justify-content: center;
 }
+
 .tag {
   padding: 0.2rem 0.4rem;
   background-color: rgba(0, 0, 0, 0.4);
@@ -81,4 +82,20 @@ body {
 .mx-2 {
   margin-left: 0.5rem;
   margin-right: 0.51rem;
+}
+
+.jcc {
+  justify-content: center;
+}
+
+.jcsb {
+  justify-content: space-between;
+}
+
+.aic {
+  align-items: center;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
